@@ -1,0 +1,278 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
+
+h1, h2 {
+  color: #d00;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+p {
+  line-height: 1.6;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav-bar {
+  background-color: #00000086;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-bar a.activo {
+  color: red;
+  border-bottom: 2px solid black;
+}
+
+.nav-bar a:hover {
+  color: #d00;
+}
+
+
+.hero {
+  background-image: url('/images/fondo1.png');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 5px black;
+  animation: moverFondo 30s infinite linear;
+}
+.hero-content {
+  text-align: center;
+  background-color: rgba(134, 134, 134, 0.421);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.slider-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slider-fondo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-fondo img.active {
+  opacity: 1;
+}
+
+
+.contenido {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 150px;
+}
+
+
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box input[type="text"]:focus {
+  border-color: #007BFF;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.grid-modelos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.modelo {
+  background-image: url('/images/fondo2.png');
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.presupuesto {
+  background-image: url('/images/fondo3.png');
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+}.contacto {
+  background-image: url('/images/fondo\ 4.png');
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+
+.modelo img {
+  width: 100%;
+  border-radius: 6px;
+}
+.presupuesto img {
+  width: 100%;
+  border-radius: 6px;
+}
+.contacto img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+
+button {
+  background-color: #d00;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+}
+
+
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+footer .redes a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+footer .redes a:hover {
+  color: red;
+}
+
+.nav-bar ul {
+  list-style: none;      
+  display: flex;         
+  gap: 2rem;             
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
